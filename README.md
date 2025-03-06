@@ -34,6 +34,16 @@ This project was developed at the **Technical University of Munich (TUM)** durin
 - **virtualenv** – For isolated Python environments.
 - **pip** – Package manager for dependencies.
 
+## Important Files
+
+- `app.py` – Main application script handling server-side requests and routing.
+- `process_miner.py` – Core logic for mining business processes from event logs.
+- `a_miner.py` – Implementation of the **α-algorithm** for process discovery.
+- `b_miner.py` – Implementation of an alternative process discovery algorithm.
+- `test_a_miner_manual.py` – Unit tests for validating **α-algorithm** results.
+- `index.html` – Main landing page of the web application.
+- `process_discovery_upload.html` – Web interface for uploading event logs and generating process models.
+- `process_discovery_display.html` – Web interface for displaying generated **Petri nets**.
 
 ## Setup & Installation
 
