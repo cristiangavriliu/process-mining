@@ -1,0 +1,214 @@
+<!-- This is the landing page of the website -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDT</title>
+    <link rel="icon" href="static/img/icon.png">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <!-- styling for the info button and popup -->
+    <style>
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .popup .popuptext {
+            visibility: hidden;
+            width: 300px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 28%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
+</head>
+
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top ">
+    <a class="navbar-brand" href="index.html"><i class="bi bi-diagram-3 mr-1"></i> PDOT</a>
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="explanation.html">What is Process Discovery</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" style="color: #398dec" href="process_discovery_upload.html">Tool</a>
+    </ul>
+
+    <!-- Info Button -->
+    <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link" href="info.html" id="navbardrop" data-toggle="dropdown">
+                <i class="bi bi-info-square"></i>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<br>
+
+<!-- Upload  Form -->
+<div class="container col-lg-5 col-lg-offset-5" style="padding-top: 50px; text-align: center;">
+    <h2><b> Process Discovery Tool </b></h2>
+    <hr>
+    <br>
+
+    <div class="container">
+        <form method='POST' enctype="multipart/form-data">
+
+            <!-- Chose algorithm-->
+            <div class="input-group mb-3 text-center">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Algorithm</span>
+                </div>
+                <select type="algorithm" name="algorithm" class="custom-select">
+                    <option value="α-algorithm">α-algorithm</option>
+                    <option value="b-algorithm">... algorithm</option>
+                </select>
+            </div>
+
+
+            <!-- Pre-defined files -->
+            <div class="input-group mb-3 d-flex flex-wrap">
+                <div class="col p-1">
+                    <button id="L1Sub" name="pre-def-file" value="L1.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L1.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="L2Sub" name="pre-def-file" value="L2.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L2.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="L3Sub" name="pre-def-file" value="L3.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L3.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="L4Sub" name="pre-def-file" value="L4.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L4.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="L5Sub" name="pre-def-file" value="L5.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L5.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="L6Sub" name="pre-def-file" value="L6.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L6.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="L7Sub" name="pre-def-file" value="L7.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> L7.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="billSub" name="pre-def-file" value="billinstances.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> billinstances.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="flySub" name="pre-def-file" value="flyerinstances.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> flyerinstances.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="postSub" name="pre-def-file" value="posterinstances.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> posterinstances.xes
+                    </button>
+                </div>
+                <div class="col p-1">
+                    <button id="runSub" name="pre-def-file" value="running-example.xes" type="submit" alue=Upload
+                            class="button blue-btn btn-lg btn-block small-text mb-1"> running-example.xes
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- File Input Box -->
+            <div class="input-group text-center">
+                <label>Data Set: </label>
+                <!-- Information popup-->
+                <div class="popup" onclick="myFunction()"> &nbsp <i class="bi bi-info-circle"></i>
+                    <span class="popuptext"
+                          id="myPopup">Please upload a single data set file <br> (Currently only .XES is supported)</span>
+                </div>
+            </div>
+            <div class="input-group mb-3 text-center">
+                <input type="file" name="file" class="form-control" id="formFile">
+            </div>
+
+            <!-- JavaScript for information popup -->
+            <script>
+                // When the user clicks on div, open the popup
+                function myFunction() {
+                    let popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                }
+            </script>
+
+            <!-- Submit Button -->
+            <button id="btSubmit" name="submit" type="submit" alue=Upload class="button blue-btn btn-lg btn-block">
+                Generate petri net
+            </button>
+        </form>
+    </div>
+
+
+</div>
+
+</html>
