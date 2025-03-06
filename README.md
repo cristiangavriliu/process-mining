@@ -139,16 +139,9 @@ python testing/test_a_miner_manual.py
 If you find any bugs or have questions, feel free to contact:
 [cristian.gavriliu@tum.de](mailto:cristian.gavriliu@tum.de)
 
-## Authors and Acknowledgment
-
-This project was developed by **Cristian Gavriliu** as part of the **Introduction to Process Mining** practical at TUM.
-
-For questions, contact:
-[cristian.gavriliu@tum.de](mailto:cristian.gavriliu@tum.de)
-
 ## License
 
-This project is for **personal use only**.
+This project is for **personal use only** and is intended as a reference point for the projects I have completed during my studies.
 
 ---
 
