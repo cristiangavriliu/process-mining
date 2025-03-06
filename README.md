@@ -155,5 +155,5 @@ This project is for **personal use only** and is intended as a reference point f
 
 ---
 
-For further details, refer to the **final project documentation**.
+For further details, refer to the **final project presentation**.
 
